@@ -1,0 +1,56 @@
+type Customer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  email: AWSEmail
+  firstName: String
+  lastName: String
+  phoneNumber: AWSPhone
+  zipCode: String
+  Reviews: [Review] @hasMany(indexName: "byCustomer", fields: ["id"])
+  Favorites: [Favorites] @hasMany(indexName: "byCustomer", fields: ["id"])
+}
+
+type Review @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  starRating: String
+  comment: String
+  customerID: ID! @index(name: "byCustomer")
+  offeringID: ID! @index(name: "byOffering")
+}
+
+type Offering @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  type: String
+  title: String
+  description: String
+  image: String
+  options: String
+  Reviews: [Review] @hasMany(indexName: "byOffering", fields: ["id"])
+  Favorites: [Favorites] @hasMany(indexName: "byOffering", fields: ["id"])
+  businessID: ID! @index(name: "byBusiness")
+}
+
+type Favorites @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  customerID: ID! @index(name: "byCustomer")
+  offeringID: ID! @index(name: "byOffering")
+}
+
+type Business @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  businessName: String
+  description: String
+  promotionStatus: String
+  location: String
+  Offerings: [Offering] @hasMany(indexName: "byBusiness", fields: ["id"])
+  businessownerID: ID! @index(name: "byBusinessOwner")
+}
+
+type BusinessOwner @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  email: String
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  paymentInfo: String
+  Businesses: [Business] @hasMany(indexName: "byBusinessOwner", fields: ["id"])
+}
