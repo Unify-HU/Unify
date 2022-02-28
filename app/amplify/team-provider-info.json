@@ -17,5 +17,23 @@
         "Unify": {}
       }
     }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-unify-test-155724-authRole",
+      "UnauthRoleArn": "arn:aws:iam::558632897797:role/amplify-unify-test-155724-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::558632897797:role/amplify-unify-test-155724-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-unify-test-155724-deployment",
+      "UnauthRoleName": "amplify-unify-test-155724-unauthRole",
+      "StackName": "amplify-unify-test-155724",
+      "StackId": "arn:aws:cloudformation:us-east-1:558632897797:stack/amplify-unify-test-155724/0efeaf60-98d9-11ec-9347-0eb02c81fec9",
+      "AmplifyAppId": "d1wj6tzqzr614f"
+    },
+    "categories": {
+      "auth": {
+        "Unify": {}
+      }
+    }
   }
 }
