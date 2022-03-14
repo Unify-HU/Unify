@@ -1,7 +1,7 @@
 import React from "react";
-import SearchBar from './ui-components/SearchBar';
-import navigation from './assets/navigation.png';
-import placeholder from './assets/placeholder.png';
+import SearchBar from "../ui-components/SearchBar";
+import navigation from '../assets/navigation.png';
+import placeholder from '../assets/Placeholder.png';
 
 export default function Home() {
     return (

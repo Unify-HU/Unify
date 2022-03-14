@@ -1,13 +1,35 @@
-const SearchBar = () => (
-    <form action="/" method="get">
-        <input
-            type="text"
-            id="header-search"
-            placeholder="Search companies and products"
-            name="s" 
-        />
-        <button type="submit">Search</button>
-    </form>
-);
+import React, {useState} from 'react'
+import { Offering} from '../models';
+
+const SearchBar = () => {
+
+    const [searchInput, setSearchInput] = useState("");
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value);
+      };if (searchInput.length > 0) {
+          Offering.filter((Offering) => {
+          return Offering.name.match(searchInput);
+      });
+      }
+return <div> 
+    <input
+     type="search"
+     placeholder="Search here"
+     onChange={handleChange}
+     value={searchInput} />
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Business</th>  
+        </tr>
+        {Offering.map((Offering, index) => {<div>
+            <tr>
+                <td>{Offering.name}</td>
+                <td>{Offering.Business}</td>
+            </tr>
+        </div>})}
+    </table></div>
+};
 
 export default SearchBar;

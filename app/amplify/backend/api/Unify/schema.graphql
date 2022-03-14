@@ -1,0 +1,57 @@
+type Favorites @model @auth(rules: [{allow: public}]) @key(name: "byCustomer", fields: ["customerID"]) {
+  id: ID!
+  customerID: ID!
+}
+
+type Reccomendation @model @auth(rules: [{allow: public}]) @key(name: "byCustomer", fields: ["customerID"]) {
+  id: ID!
+  customerID: ID!
+}
+
+type BusinessOwner @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  email: AWSEmail
+  firstName: String
+  phoneNumber: AWSPhone
+  Businesses: [Business] @connection(keyName: "byBusinessOwner", fields: ["id"])
+}
+
+type Business @model @auth(rules: [{allow: public}]) @key(name: "byBusinessOwner", fields: ["businessownerID"]) {
+  id: ID!
+  description: String
+  location: String
+  promotionStatus: String
+  Offerings: [Offering] @connection(keyName: "byBusiness", fields: ["id"])
+  businessownerID: ID!
+}
+
+type Offering @model @auth(rules: [{allow: public}]) @key(name: "byBusiness", fields: ["businessID"]) {
+  id: ID!
+  type: String
+  title: String
+  description: String
+  image: AWSURL
+  businessID: ID!
+  Reviews: [Review] @connection(keyName: "byOffering", fields: ["id"])
+}
+
+type Review @model @auth(rules: [{allow: public}]) @key(name: "byCustomer", fields: ["customerID"]) @key(name: "byOffering", fields: ["offeringID"]) {
+  id: ID!
+  rating: Float
+  comment: String
+  customerID: ID!
+  offeringID: ID!
+}
+
+type Customer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  email: AWSEmail
+  firstNam: String
+  lastName: String
+  phoneNumber: AWSPhone
+  zipCode: Int
+  Reccomendations: [Reccomendation] @connection(keyName: "byCustomer", fields: ["id"])
+  Favorites: [Favorites] @connection(keyName: "byCustomer", fields: ["id"])
+  Reviews: [Review] @connection(keyName: "byCustomer", fields: ["id"])
+}
+ 
