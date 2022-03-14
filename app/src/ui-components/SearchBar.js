@@ -26,7 +26,6 @@ return <div>
         {Offering.map((Offering, index) => {<div>
             <tr>
                 <td>{Offering.name}</td>
-                <td>{Offering.Business}</td>
             </tr>
         </div>})}
     </table></div>

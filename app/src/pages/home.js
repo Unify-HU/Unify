@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "../ui-components/SearchBar";
+//import SearchBar from "../ui-components/SearchBar";
 import navigation from '../assets/navigation.png';
 import placeholder from '../assets/Placeholder.png';
 
@@ -9,14 +9,13 @@ export default function Home() {
       <div style={{ fontFamily: "Pacifico" }}>
         <center>
           Unify
-        <SearchBar />
         </center>
         <center2>
-         <img src={navigation}/>
+         <img src={navigation} height="42px" widht="42px"/>
          Suggestions near Washington, 20001
          </center2>
         <h1>
-          <img src={placeholder} alt="placeholder image for products"/>
+          <img src={placeholder} alt="placeholder image for products" height="126px" width="126px"/>
         </h1>
 
       </div>

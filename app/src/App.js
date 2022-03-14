@@ -7,7 +7,7 @@ import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
 Amplify.configure(awsExports);
 
-function App({ signOut, user }) {
+function App() {
   return (
     <>
       <Home />
@@ -15,4 +15,4 @@ function App({ signOut, user }) {
   );
 }
 
-export default withAuthenticator(App);
+export default App;
