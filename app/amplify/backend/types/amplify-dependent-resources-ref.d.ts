@@ -10,5 +10,11 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientID": "string",
             "CreatedSNSRole": "string"
         }
+    },
+    "api": {
+        "Unify": {
+            "GraphQLAPIIdOutput": "string",
+            "GraphQLAPIEndpointOutput": "string"
+        }
     }
 }

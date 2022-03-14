@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@aws-amplify/ui-react": "^2.1.10",
+    "@graphql-codegen/typescript": "^2.4.7",
+    "@graphql-codegen/typescript-operations": "^2.3.4",
+    "@graphql-codegen/typescript-react-query": "^3.5.7",
     "@react-native-async-storage/async-storage": "^1.15.17",
     "@react-native-community/netinfo": "^7.1.9",
     "@react-native-picker/picker": "^2.2.1",
