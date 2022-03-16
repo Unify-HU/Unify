@@ -7,11 +7,10 @@ const SearchBar = () => {
     const handleChange = (e) => {
         e.preventDefault();
         setSearchInput(e.target.value);
-      };if (searchInput.length > 0) {
-          Offering.filter((Offering) => {
+      };
+      if (searchInput.length > 0) {
           return Offering.name.match(searchInput);
-      });
-      }
+      };
 return <div> 
     <input
      type="search"
@@ -23,12 +22,12 @@ return <div>
             <th>Product</th>
             <th>Business</th>  
         </tr>
-        {Offering.map((Offering, index) => {<div>
+        {Offering => {<div>
             <tr>
                 <td>{Offering.name}</td>
             </tr>
-        </div>})}
-    </table></div>
+        </div>}}
+    </table> </div>
 };
 
 export default SearchBar;
