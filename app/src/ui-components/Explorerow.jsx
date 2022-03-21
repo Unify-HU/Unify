@@ -23,23 +23,23 @@ export default function Explorerow(props) {
       <View
         position="absolute"
         top="0%"
-        bottom="23.134328358208954%"
+        bottom="23.13%"
         left="0%"
-        right="62.54545454545455%"
+        right="62.55%"
         borderRadius="10px"
         padding="0px 0px 0px 0px"
-        backgroundColor="rgba(196.00000351667404,196.00000351667404,196.00000351667404,1)"
+        backgroundColor="rgba(196,196,196,1)"
         {...getOverrideProps(overrides, "View.View[0]")}
       ></View>
       <View
         position="absolute"
         top="0%"
-        bottom="23.134328358208954%"
-        left="62.54545454545455%"
+        bottom="23.13%"
+        left="62.55%"
         right="0%"
         borderRadius="10px"
         padding="0px 0px 0px 0px"
-        backgroundColor="rgba(196.00000351667404,196.00000351667404,196.00000351667404,1)"
+        backgroundColor="rgba(196,196,196,1)"
         {...getOverrideProps(overrides, "View.View[1]")}
       ></View>
       <Text
@@ -53,11 +53,12 @@ export default function Explorerow(props) {
         direction="column"
         justifyContent="flex-start"
         position="absolute"
-        top="82.08955223880598%"
+        top="82.09%"
         bottom="0%"
-        left="2.5454545454545454%"
-        right="64.72727272727272%"
+        left="2.55%"
+        right="64.73%"
         padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
         children="Restaurants"
         {...getOverrideProps(overrides, "View.Text[0]")}
       ></Text>
@@ -72,11 +73,12 @@ export default function Explorerow(props) {
         direction="column"
         justifyContent="flex-start"
         position="absolute"
-        top="82.08955223880598%"
+        top="82.09%"
         bottom="0%"
-        left="68.72727272727272%"
-        right="5.818181818181818%"
+        left="68.73%"
+        right="5.82%"
         padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
         children="Products "
         {...getOverrideProps(overrides, "View.Text[1]")}
       ></Text>

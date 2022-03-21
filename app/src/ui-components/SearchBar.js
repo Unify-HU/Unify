@@ -1,33 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react';
 import { Offering} from '../models';
+import List from './List';
 
-const SearchBar = () => {
+export default function SearchBar(){
+    const [search, setSearch] = useState('')
 
-    const [searchInput, setSearchInput] = useState("");
-    const handleChange = (e) => {
-        e.preventDefault();
-        setSearchInput(e.target.value);
-      };
-      if (searchInput.length > 0) {
-          return Offering.name.match(searchInput);
-      };
-return <div> 
-    <input
-     type="search"
-     placeholder="Search here"
-     onChange={handleChange}
-     value={searchInput} />
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Business</th>  
-        </tr>
-        {Offering => {<div>
-            <tr>
-                <td>{Offering.name}</td>
-            </tr>
-        </div>}}
-    </table> </div>
+    return(
+        <div>
+            <h3 className="title">Offerings</h3>
+            <input 
+                type="text" 
+                placeholder="Search name" 
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+            /> 
+        <List Offerings={Offering}/>
+        </div>
+    )
 };
-
-export default SearchBar;

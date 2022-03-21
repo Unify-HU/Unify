@@ -4,9 +4,10 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-export { default as FeaturedServices } from "./FeaturedServices";
-export { default as Topbanner } from "./Topbanner";
-export { default as FeaturedProducts } from "./FeaturedProducts";
-export { default as BPaction } from "./BPaction";
-export { default as Favoptionacc } from "./Favoptionacc";
-export { default as Explorerow } from "./Explorerow";
+import React from "react";
+import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type FeaturedProductsProps = React.PropsWithChildren<Partial<ViewProps> & {
+    overrides?: EscapeHatchProps | undefined | null;
+}>;
+export default function FeaturedProducts(props: FeaturedProductsProps): React.ReactElement;
