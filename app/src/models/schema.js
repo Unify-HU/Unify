@@ -226,6 +226,13 @@ export const schema = {
                     "type": "ID",
                     "isRequired": true,
                     "attributes": []
+                },
+                "businessName": {
+                    "name": "businessName",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
                 }
             },
             "syncable": true,
@@ -554,5 +561,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "a35222acb84f39701f629961310e744d"
+    "version": "a2742097e3c20730b4d871ce1a335f48"
 };

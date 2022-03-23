@@ -35,6 +35,7 @@ export declare class Business {
   readonly promotionStatus?: string;
   readonly Offerings?: (Offering | null)[];
   readonly businessownerID: string;
+  readonly businessName?: string;
   constructor(init: ModelInit<Business>);
   static copyOf(source: Business, mutator: (draft: MutableModel<Business>) => MutableModel<Business> | void): Business;
 }

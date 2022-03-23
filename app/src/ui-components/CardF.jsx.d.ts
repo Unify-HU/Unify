@@ -5,9 +5,12 @@
  **************************************************************************/
 
 import React from "react";
+import { Business } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type CardFProps = React.PropsWithChildren<Partial<FlexProps> & {
+    business?: Business;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function CardF(props: CardFProps): React.ReactElement;
