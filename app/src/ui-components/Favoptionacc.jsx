@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Image, Text, View } from "@aws-amplify/ui-react";
 export default function Favoptionacc(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <View
       width="348px"
@@ -18,7 +17,7 @@ export default function Favoptionacc(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "View")}
+      {...getOverrideProps(overrides, "Favoptionacc")}
     >
       <Text
         fontFamily="Roboto"
@@ -38,7 +37,7 @@ export default function Favoptionacc(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Your Favorites "
-        {...getOverrideProps(overrides, "View.Text[0]")}
+        {...getOverrideProps(overrides, "Your Favorites")}
       ></Text>
       <View
         padding="0px 0px 0px 0px"
@@ -47,7 +46,7 @@ export default function Favoptionacc(props) {
         bottom="18.67%"
         left="0.86%"
         right="0%"
-        {...getOverrideProps(overrides, "View.View[0]")}
+        {...getOverrideProps(overrides, "Featured Products")}
       >
         <View
           position="absolute"
@@ -57,7 +56,7 @@ export default function Favoptionacc(props) {
           right="0%"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(196,196,196,1)"
-          {...getOverrideProps(overrides, "View.View[0].View[0]")}
+          {...getOverrideProps(overrides, "featured products 3")}
         ></View>
         <Image
           position="absolute"
@@ -68,7 +67,7 @@ export default function Favoptionacc(props) {
           right="0%"
           width="29.86%"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "View.View[0].Image[0]")}
+          {...getOverrideProps(overrides, "Gemocracy")}
         ></Image>
         <View
           position="absolute"
@@ -78,7 +77,7 @@ export default function Favoptionacc(props) {
           right="35.07%"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(196,196,196,1)"
-          {...getOverrideProps(overrides, "View.View[0].View[1]")}
+          {...getOverrideProps(overrides, "featured products 2")}
         ></View>
         <Image
           position="absolute"
@@ -89,7 +88,7 @@ export default function Favoptionacc(props) {
           right="35.07%"
           width="30.14%"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "View.View[0].Image[1]")}
+          {...getOverrideProps(overrides, "Elevated Tea")}
         ></Image>
         <View
           position="absolute"
@@ -99,7 +98,7 @@ export default function Favoptionacc(props) {
           right="70.14%"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(196,196,196,1)"
-          {...getOverrideProps(overrides, "View.View[0].View[2]")}
+          {...getOverrideProps(overrides, "featured products 1")}
         ></View>
         <Image
           position="absolute"
@@ -110,7 +109,7 @@ export default function Favoptionacc(props) {
           right="70.14%"
           width="29.86%"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "View.View[0].Image[2]")}
+          {...getOverrideProps(overrides, "Co-Pothecary")}
         ></Image>
       </View>
       <Text
@@ -132,7 +131,7 @@ export default function Favoptionacc(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="See all"
-        {...getOverrideProps(overrides, "View.Text[1]")}
+        {...getOverrideProps(overrides, "See all")}
       ></Text>
     </View>
   );

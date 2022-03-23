@@ -1,16 +1,14 @@
 import React from "react";
-import SearchBar from "../ui-components/SearchBar";
 import navigation from '../assets/navigation.png';
 import placeholder from '../assets/Placeholder.png';
-import {Topbanner} from   "../ui-components"
+import {NavBar} from   "../ui-components"
 
 export default function Home() {
     return (
       
       <div style={{ fontFamily: "Pacifico" }}>
         <center>
-        <Topbanner/>
-        <SearchBar />
+        <NavBar/>
         </center>
         <center2>
          <img src={navigation} height="42px" widht="42px"/>

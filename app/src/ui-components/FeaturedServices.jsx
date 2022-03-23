@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function FeaturedServices(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <View
       width="395px"
@@ -18,7 +17,7 @@ export default function FeaturedServices(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "View")}
+      {...getOverrideProps(overrides, "FeaturedServices")}
     >
       <Text
         fontFamily="Roboto"
@@ -38,7 +37,7 @@ export default function FeaturedServices(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Featured Services "
-        {...getOverrideProps(overrides, "View.Text[0]")}
+        {...getOverrideProps(overrides, "Featured Services")}
       ></Text>
       <View
         position="absolute"
@@ -48,7 +47,7 @@ export default function FeaturedServices(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(196,196,196,1)"
-        {...getOverrideProps(overrides, "View.View[0]")}
+        {...getOverrideProps(overrides, "featured products 3")}
       ></View>
       <Image
         position="absolute"
@@ -59,7 +58,7 @@ export default function FeaturedServices(props) {
         right="0%"
         width="29.51%"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "View.Image[0]")}
+        {...getOverrideProps(overrides, "Gemocracy")}
       ></Image>
       <View
         position="absolute"
@@ -69,7 +68,7 @@ export default function FeaturedServices(props) {
         right="34.67%"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(196,196,196,1)"
-        {...getOverrideProps(overrides, "View.View[1]")}
+        {...getOverrideProps(overrides, "featured products 2")}
       ></View>
       <Image
         position="absolute"
@@ -80,7 +79,7 @@ export default function FeaturedServices(props) {
         right="34.67%"
         width="29.8%"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "View.Image[1]")}
+        {...getOverrideProps(overrides, "Elevated Teakuh")}
       ></Image>
       <View
         position="absolute"
@@ -90,7 +89,7 @@ export default function FeaturedServices(props) {
         right="69.34%"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(196,196,196,1)"
-        {...getOverrideProps(overrides, "View.View[2]")}
+        {...getOverrideProps(overrides, "featured products 1")}
       ></View>
       <Image
         position="absolute"
@@ -101,7 +100,7 @@ export default function FeaturedServices(props) {
         right="69.34%"
         width="29.51%"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "View.Image[2]")}
+        {...getOverrideProps(overrides, "Co-Pothecary")}
       ></Image>
       <Text
         fontFamily="Roboto"
@@ -122,7 +121,7 @@ export default function FeaturedServices(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="View more"
-        {...getOverrideProps(overrides, "View.Text[1]")}
+        {...getOverrideProps(overrides, "View more")}
       ></Text>
       <View
         padding="0px 0px 0px 0px"
@@ -131,7 +130,7 @@ export default function FeaturedServices(props) {
         bottom="13.78%"
         left="35.53%"
         right="0.86%"
-        {...getOverrideProps(overrides, "View.View[3]")}
+        {...getOverrideProps(overrides, "feature descriptiongha")}
       >
         <Text
           fontFamily="Roboto"
@@ -151,7 +150,7 @@ export default function FeaturedServices(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Elevated Tea"
-          {...getOverrideProps(overrides, "View.View[3].Text[0]")}
+          {...getOverrideProps(overrides, "Elevated Teaexf")}
         ></Text>
         <View
           padding="0px 0px 0px 0px"
@@ -160,7 +159,7 @@ export default function FeaturedServices(props) {
           bottom="0%"
           left="0%"
           right="81.53%"
-          {...getOverrideProps(overrides, "View.View[3].View[0]")}
+          {...getOverrideProps(overrides, "ratingcqc")}
         >
           <Text
             fontFamily="Roboto"
@@ -180,7 +179,7 @@ export default function FeaturedServices(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="5.0 "
-            {...getOverrideProps(overrides, "View.View[3].View[0].Text[0]")}
+            {...getOverrideProps(overrides, "5.0")}
           ></Text>
           <View
             position="absolute"
@@ -190,7 +189,7 @@ export default function FeaturedServices(props) {
             right="14.63%"
             overflow="hidden"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "View.View[3].View[0].View[0]")}
+            {...getOverrideProps(overrides, "star_rategtb")}
           >
             <Icon
               width="12.8271484375px"
@@ -213,10 +212,7 @@ export default function FeaturedServices(props) {
               bottom="22.22%"
               left="16.67%"
               right="16.67%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[3].View[0].View[0].Icon[0]"
-              )}
+              {...getOverrideProps(overrides, "Vectorwlp")}
             ></Icon>
             <Icon
               width="19.24066162109375px"
@@ -233,10 +229,7 @@ export default function FeaturedServices(props) {
               bottom="0%"
               left="0%"
               right="0%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[3].View[0].View[0].Icon[1]"
-              )}
+              {...getOverrideProps(overrides, "Vectorpus")}
             ></Icon>
           </View>
         </View>
@@ -247,7 +240,7 @@ export default function FeaturedServices(props) {
           bottom="2.56%"
           left="54.95%"
           right="0%"
-          {...getOverrideProps(overrides, "View.View[3].View[1]")}
+          {...getOverrideProps(overrides, "feature descriptionhon")}
         >
           <Text
             fontFamily="Roboto"
@@ -267,7 +260,7 @@ export default function FeaturedServices(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Kitenge Cloth Bags"
-            {...getOverrideProps(overrides, "View.View[3].View[1].Text[0]")}
+            {...getOverrideProps(overrides, "Kitenge Cloth Bags")}
           ></Text>
           <View
             padding="0px 0px 0px 0px"
@@ -276,7 +269,7 @@ export default function FeaturedServices(props) {
             bottom="0%"
             left="0%"
             right="59%"
-            {...getOverrideProps(overrides, "View.View[3].View[1].View[0]")}
+            {...getOverrideProps(overrides, "ratingvqs")}
           >
             <Text
               fontFamily="Roboto"
@@ -296,10 +289,7 @@ export default function FeaturedServices(props) {
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
               children="4.9 "
-              {...getOverrideProps(
-                overrides,
-                "View.View[3].View[1].View[0].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "4.9")}
             ></Text>
             <View
               position="absolute"
@@ -309,10 +299,7 @@ export default function FeaturedServices(props) {
               right="14.63%"
               overflow="hidden"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "View.View[3].View[1].View[0].View[0]"
-              )}
+              {...getOverrideProps(overrides, "star_ratekvq")}
             >
               <Icon
                 width="12.8271484375px"
@@ -335,10 +322,7 @@ export default function FeaturedServices(props) {
                 bottom="22.22%"
                 left="16.67%"
                 right="16.67%"
-                {...getOverrideProps(
-                  overrides,
-                  "View.View[3].View[1].View[0].View[0].Icon[0]"
-                )}
+                {...getOverrideProps(overrides, "Vectorvvr")}
               ></Icon>
               <Icon
                 width="19.24066162109375px"
@@ -355,10 +339,7 @@ export default function FeaturedServices(props) {
                 bottom="0%"
                 left="0%"
                 right="0%"
-                {...getOverrideProps(
-                  overrides,
-                  "View.View[3].View[1].View[0].View[0].Icon[1]"
-                )}
+                {...getOverrideProps(overrides, "Vectorofu")}
               ></Icon>
             </View>
           </View>
@@ -371,7 +352,7 @@ export default function FeaturedServices(props) {
         bottom="14.17%"
         left="1.15%"
         right="70.2%"
-        {...getOverrideProps(overrides, "View.View[4]")}
+        {...getOverrideProps(overrides, "feature descriptionomo")}
       >
         <Text
           fontFamily="Roboto"
@@ -391,7 +372,7 @@ export default function FeaturedServices(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Hemp Extract Balms"
-          {...getOverrideProps(overrides, "View.View[4].Text[0]")}
+          {...getOverrideProps(overrides, "Hemp Extract Balms")}
         ></Text>
         <View
           padding="0px 0px 0px 0px"
@@ -400,7 +381,7 @@ export default function FeaturedServices(props) {
           bottom="0%"
           left="0%"
           right="59%"
-          {...getOverrideProps(overrides, "View.View[4].View[0]")}
+          {...getOverrideProps(overrides, "rating")}
         >
           <Text
             fontFamily="Roboto"
@@ -420,7 +401,7 @@ export default function FeaturedServices(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="4.8 "
-            {...getOverrideProps(overrides, "View.View[4].View[0].Text[0]")}
+            {...getOverrideProps(overrides, "4.8")}
           ></Text>
           <View
             position="absolute"
@@ -430,7 +411,7 @@ export default function FeaturedServices(props) {
             right="14.63%"
             overflow="hidden"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "View.View[4].View[0].View[0]")}
+            {...getOverrideProps(overrides, "star_rate")}
           >
             <Icon
               width="12.8271484375px"
@@ -453,10 +434,7 @@ export default function FeaturedServices(props) {
               bottom="22.22%"
               left="16.67%"
               right="16.67%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[4].View[0].View[0].Icon[0]"
-              )}
+              {...getOverrideProps(overrides, "Vectorwxv")}
             ></Icon>
             <Icon
               width="19.24066162109375px"
@@ -473,10 +451,7 @@ export default function FeaturedServices(props) {
               bottom="0%"
               left="0%"
               right="0%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[4].View[0].View[0].Icon[1]"
-              )}
+              {...getOverrideProps(overrides, "Vectorjyc")}
             ></Icon>
           </View>
         </View>

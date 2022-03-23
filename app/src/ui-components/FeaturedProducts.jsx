@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function FeaturedProducts(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <View
       width="395px"
@@ -18,7 +17,7 @@ export default function FeaturedProducts(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "View")}
+      {...getOverrideProps(overrides, "FeaturedProducts")}
     >
       <Text
         fontFamily="Roboto"
@@ -39,7 +38,7 @@ export default function FeaturedProducts(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="View more"
-        {...getOverrideProps(overrides, "View.Text[0]")}
+        {...getOverrideProps(overrides, "View more")}
       ></Text>
       <View
         padding="0px 0px 0px 0px"
@@ -48,7 +47,7 @@ export default function FeaturedProducts(props) {
         bottom="13.78%"
         left="0%"
         right="0%"
-        {...getOverrideProps(overrides, "View.View[0]")}
+        {...getOverrideProps(overrides, "feature descriptionhkm")}
       >
         <Text
           fontFamily="Roboto"
@@ -68,7 +67,7 @@ export default function FeaturedProducts(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Elevated Tea"
-          {...getOverrideProps(overrides, "View.View[0].Text[0]")}
+          {...getOverrideProps(overrides, "Elevated Teawmh")}
         ></Text>
         <View
           padding="0px 0px 0px 0px"
@@ -77,7 +76,7 @@ export default function FeaturedProducts(props) {
           bottom="0%"
           left="35.53%"
           right="52.72%"
-          {...getOverrideProps(overrides, "View.View[0].View[0]")}
+          {...getOverrideProps(overrides, "ratingfyt")}
         >
           <Text
             fontFamily="Roboto"
@@ -97,7 +96,7 @@ export default function FeaturedProducts(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="5.0 "
-            {...getOverrideProps(overrides, "View.View[0].View[0].Text[0]")}
+            {...getOverrideProps(overrides, "5.0")}
           ></Text>
           <View
             position="absolute"
@@ -107,7 +106,7 @@ export default function FeaturedProducts(props) {
             right="14.63%"
             overflow="hidden"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "View.View[0].View[0].View[0]")}
+            {...getOverrideProps(overrides, "star_ratepfr")}
           >
             <Icon
               width="12.8271484375px"
@@ -130,10 +129,7 @@ export default function FeaturedProducts(props) {
               bottom="22.22%"
               left="16.67%"
               right="16.67%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[0].View[0].View[0].Icon[0]"
-              )}
+              {...getOverrideProps(overrides, "Vectorfup")}
             ></Icon>
             <Icon
               width="19.24066162109375px"
@@ -150,10 +146,7 @@ export default function FeaturedProducts(props) {
               bottom="0%"
               left="0%"
               right="0%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[0].View[0].View[0].Icon[1]"
-              )}
+              {...getOverrideProps(overrides, "Vectorxbm")}
             ></Icon>
           </View>
         </View>
@@ -175,7 +168,7 @@ export default function FeaturedProducts(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Featured Products "
-          {...getOverrideProps(overrides, "View.View[0].Text[1]")}
+          {...getOverrideProps(overrides, "Featured Products")}
         ></Text>
         <View
           position="absolute"
@@ -185,7 +178,7 @@ export default function FeaturedProducts(props) {
           right="0%"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(196,196,196,1)"
-          {...getOverrideProps(overrides, "View.View[0].View[1]")}
+          {...getOverrideProps(overrides, "featured products 3")}
         ></View>
         <Image
           position="absolute"
@@ -196,7 +189,7 @@ export default function FeaturedProducts(props) {
           right="0%"
           width="29.51%"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "View.View[0].Image[0]")}
+          {...getOverrideProps(overrides, "Gemocracy")}
         ></Image>
       </View>
       <View
@@ -206,7 +199,7 @@ export default function FeaturedProducts(props) {
         bottom="14.17%"
         left="35.53%"
         right="0.86%"
-        {...getOverrideProps(overrides, "View.View[1]")}
+        {...getOverrideProps(overrides, "feature descriptiongza")}
       >
         <View
           position="absolute"
@@ -216,7 +209,7 @@ export default function FeaturedProducts(props) {
           right="53.15%"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(196,196,196,1)"
-          {...getOverrideProps(overrides, "View.View[1].View[0]")}
+          {...getOverrideProps(overrides, "featured products 2")}
         ></View>
         <Text
           fontFamily="Roboto"
@@ -236,7 +229,7 @@ export default function FeaturedProducts(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Kitenge Cloth Bags"
-          {...getOverrideProps(overrides, "View.View[1].Text[0]")}
+          {...getOverrideProps(overrides, "Kitenge Cloth Bags")}
         ></Text>
         <View
           padding="0px 0px 0px 0px"
@@ -245,7 +238,7 @@ export default function FeaturedProducts(props) {
           bottom="0%"
           left="54.95%"
           right="26.58%"
-          {...getOverrideProps(overrides, "View.View[1].View[1]")}
+          {...getOverrideProps(overrides, "ratingeys")}
         >
           <Text
             fontFamily="Roboto"
@@ -265,7 +258,7 @@ export default function FeaturedProducts(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="4.9 "
-            {...getOverrideProps(overrides, "View.View[1].View[1].Text[0]")}
+            {...getOverrideProps(overrides, "4.9")}
           ></Text>
           <View
             position="absolute"
@@ -275,7 +268,7 @@ export default function FeaturedProducts(props) {
             right="14.63%"
             overflow="hidden"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "View.View[1].View[1].View[0]")}
+            {...getOverrideProps(overrides, "star_ratehxm")}
           >
             <Icon
               width="12.8271484375px"
@@ -298,10 +291,7 @@ export default function FeaturedProducts(props) {
               bottom="22.22%"
               left="16.67%"
               right="16.67%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[1].View[1].View[0].Icon[0]"
-              )}
+              {...getOverrideProps(overrides, "Vectorrjw")}
             ></Icon>
             <Icon
               width="19.24066162109375px"
@@ -318,10 +308,7 @@ export default function FeaturedProducts(props) {
               bottom="0%"
               left="0%"
               right="0%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[1].View[1].View[0].Icon[1]"
-              )}
+              {...getOverrideProps(overrides, "Vectorvax")}
             ></Icon>
           </View>
         </View>
@@ -334,7 +321,7 @@ export default function FeaturedProducts(props) {
           right="53.15%"
           width="46.85%"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "View.View[1].Image[0]")}
+          {...getOverrideProps(overrides, "Elevated Teasgh")}
         ></Image>
       </View>
       <View
@@ -344,7 +331,7 @@ export default function FeaturedProducts(props) {
         bottom="14.17%"
         left="1.15%"
         right="69.34%"
-        {...getOverrideProps(overrides, "View.View[2]")}
+        {...getOverrideProps(overrides, "feature descriptioncpq")}
       >
         <View
           position="absolute"
@@ -354,7 +341,7 @@ export default function FeaturedProducts(props) {
           right="0%"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(196,196,196,1)"
-          {...getOverrideProps(overrides, "View.View[2].View[0]")}
+          {...getOverrideProps(overrides, "featured products 1")}
         ></View>
         <Text
           fontFamily="Roboto"
@@ -374,7 +361,7 @@ export default function FeaturedProducts(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Hemp Extract Balms"
-          {...getOverrideProps(overrides, "View.View[2].Text[0]")}
+          {...getOverrideProps(overrides, "Hemp Extract Balms")}
         ></Text>
         <View
           padding="0px 0px 0px 0px"
@@ -383,7 +370,7 @@ export default function FeaturedProducts(props) {
           bottom="0%"
           left="0%"
           right="60.19%"
-          {...getOverrideProps(overrides, "View.View[2].View[1]")}
+          {...getOverrideProps(overrides, "ratingylr")}
         >
           <Text
             fontFamily="Roboto"
@@ -403,7 +390,7 @@ export default function FeaturedProducts(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="4.8 "
-            {...getOverrideProps(overrides, "View.View[2].View[1].Text[0]")}
+            {...getOverrideProps(overrides, "4.8")}
           ></Text>
           <View
             position="absolute"
@@ -413,7 +400,7 @@ export default function FeaturedProducts(props) {
             right="14.63%"
             overflow="hidden"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "View.View[2].View[1].View[0]")}
+            {...getOverrideProps(overrides, "star_ratebbw")}
           >
             <Icon
               width="12.8271484375px"
@@ -436,10 +423,7 @@ export default function FeaturedProducts(props) {
               bottom="22.22%"
               left="16.67%"
               right="16.67%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[2].View[1].View[0].Icon[0]"
-              )}
+              {...getOverrideProps(overrides, "Vectortpu")}
             ></Icon>
             <Icon
               width="19.24066162109375px"
@@ -456,10 +440,7 @@ export default function FeaturedProducts(props) {
               bottom="0%"
               left="0%"
               right="0%"
-              {...getOverrideProps(
-                overrides,
-                "View.View[2].View[1].View[0].Icon[1]"
-              )}
+              {...getOverrideProps(overrides, "Vectorwvj")}
             ></Icon>
           </View>
         </View>
@@ -472,7 +453,7 @@ export default function FeaturedProducts(props) {
           right="0%"
           width="100%"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "View.View[2].Image[0]")}
+          {...getOverrideProps(overrides, "Co-Pothecary")}
         ></Image>
       </View>
     </View>

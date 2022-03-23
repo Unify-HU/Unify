@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function Topbanner(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="309px"
@@ -21,7 +20,7 @@ export default function Topbanner(props) {
       padding="25px 67px 25px 67px"
       backgroundColor="rgba(47,46,46,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "Topbanner")}
     >
       <Text
         fontFamily="Pacifico"
@@ -40,7 +39,7 @@ export default function Topbanner(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Unify"
-        {...getOverrideProps(overrides, "Flex.Text[0]")}
+        {...getOverrideProps(overrides, "Unify")}
       ></Text>
       <Text
         fontFamily="Inter"
@@ -59,7 +58,7 @@ export default function Topbanner(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Buisness Portal"
-        {...getOverrideProps(overrides, "Flex.Text[1]")}
+        {...getOverrideProps(overrides, "Buisness Portal")}
       ></Text>
       <Text
         fontFamily="Roboto"
@@ -79,7 +78,7 @@ export default function Topbanner(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Account Settings"
-        {...getOverrideProps(overrides, "Flex.Text[2]")}
+        {...getOverrideProps(overrides, "Account Settings")}
       ></Text>
     </Flex>
   );
