@@ -8,9 +8,9 @@ import React from "react";
 import { Business } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ContactUsProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type HomePageBusinessCardCustomerViewProps = React.PropsWithChildren<Partial<FlexProps> & {
     business?: Business;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function ContactUs(props: ContactUsProps): React.ReactElement;
+export default function HomePageBusinessCardCustomerView(props: HomePageBusinessCardCustomerViewProps): React.ReactElement;

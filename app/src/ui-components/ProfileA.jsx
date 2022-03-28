@@ -6,15 +6,11 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useNavigateAction,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 export default function ProfileA(props) {
   const { overrides, ...rest } = props;
-  const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <Flex
       gap="24px"
@@ -116,8 +112,8 @@ export default function ProfileA(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="99 Followers"
-          {...getOverrideProps(overrides, "99 Followers")}
+          children="7 Reviews"
+          {...getOverrideProps(overrides, "7 Reviews")}
         ></Text>
       </Flex>
       <Button
@@ -138,9 +134,6 @@ export default function ProfileA(props) {
         isDisabled={false}
         variation="primary"
         children="View Profile"
-        onClick={() => {
-          buttonOnClick();
-        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </Flex>

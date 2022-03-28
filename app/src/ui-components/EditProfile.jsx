@@ -94,7 +94,7 @@ export default function EditProfile(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Edit Profile"
-            {...getOverrideProps(overrides, "Edit Profilelpc")}
+            {...getOverrideProps(overrides, "Edit Profilegji")}
           ></Text>
         </Flex>
         <Divider
@@ -106,7 +106,7 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividertyr")}
+          {...getOverrideProps(overrides, "Dividerowl")}
         ></Divider>
         <Flex
           gap="16px"
@@ -173,7 +173,7 @@ export default function EditProfile(props) {
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFielddqu")}
+            {...getOverrideProps(overrides, "TextFieldetr")}
           ></TextField>
           <TextField
             display="flex"
@@ -191,7 +191,7 @@ export default function EditProfile(props) {
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFieldqgz")}
+            {...getOverrideProps(overrides, "TextFieldsmg")}
           ></TextField>
           <TextField
             display="flex"
@@ -209,7 +209,7 @@ export default function EditProfile(props) {
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFieldlkh")}
+            {...getOverrideProps(overrides, "TextFieldeep")}
           ></TextField>
         </Flex>
         <Divider
@@ -221,27 +221,36 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividerfui")}
+          {...getOverrideProps(overrides, "Dividermzz")}
         ></Divider>
-        <Button
-          display="flex"
-          gap="0"
-          direction="row"
-          width="fit-content"
-          justifyContent="center"
-          alignItems="center"
+        <Flex
+          padding="0px 0px 0px 0px"
+          width="71px"
+          height="40px"
           shrink="0"
           position="relative"
-          border="1px SOLID rgba(0,0,0,0)"
-          borderRadius="4px"
-          padding="7px 15px 7px 15px"
-          backgroundColor="rgba(4,125,149,1)"
-          size="default"
-          isDisabled={false}
-          variation="primary"
-          children="Save"
-          {...getOverrideProps(overrides, "Button")}
-        ></Button>
+          {...getOverrideProps(overrides, "Group 321")}
+        >
+          <Button
+            display="flex"
+            gap="0"
+            position="absolute"
+            top="0px"
+            left="0px"
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            border="1px SOLID rgba(0,0,0,0)"
+            borderRadius="4px"
+            padding="7px 15px 7px 15px"
+            backgroundColor="rgba(4,125,149,1)"
+            size="default"
+            isDisabled={false}
+            variation="primary"
+            children="Save"
+            {...getOverrideProps(overrides, "Button")}
+          ></Button>
+        </Flex>
       </Flex>
     </Flex>
   );

@@ -18,7 +18,7 @@ import {
   View,
 } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
-export default function CardF(props) {
+export default function HomePageBusinessCardCustomerView(props) {
   const { business, overrides, ...rest } = props;
   return (
     <Flex
@@ -29,7 +29,7 @@ export default function CardF(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "CardF")}
+      {...getOverrideProps(overrides, "HomePageBusinessCardCustomerView")}
     >
       <Image
         width="320px"
@@ -38,6 +38,7 @@ export default function CardF(props) {
         alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
+        src={business?.businessPicture}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
@@ -146,7 +147,7 @@ export default function CardF(props) {
             size="small"
             variation="default"
             children="New"
-            {...getOverrideProps(overrides, "Badgefpj")}
+            {...getOverrideProps(overrides, "Badgerfc")}
           ></Badge>
           <Badge
             display="flex"
@@ -170,7 +171,7 @@ export default function CardF(props) {
             size="small"
             variation="default"
             children="Classic"
-            {...getOverrideProps(overrides, "Badgedjw")}
+            {...getOverrideProps(overrides, "Badgeysk")}
           ></Badge>
           <Badge
             display="flex"
@@ -194,7 +195,7 @@ export default function CardF(props) {
             size="small"
             variation="default"
             children="Modern"
-            {...getOverrideProps(overrides, "Badgehwv")}
+            {...getOverrideProps(overrides, "Badgeaou")}
           ></Badge>
         </Flex>
         <Text
