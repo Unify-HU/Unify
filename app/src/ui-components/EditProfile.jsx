@@ -83,7 +83,7 @@ export default function EditProfile(props) {
             fontFamily="Inter"
             fontSize="16px"
             fontWeight="400"
-            color="rgba(13,26,38,1)"
+            color="rgba(44,92,102,1)"
             lineHeight="20px"
             textAlign="left"
             display="flex"
@@ -94,7 +94,7 @@ export default function EditProfile(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Edit Profile"
-            {...getOverrideProps(overrides, "Edit Profilegji")}
+            {...getOverrideProps(overrides, "Edit Profileerc")}
           ></Text>
         </Flex>
         <Divider
@@ -106,7 +106,7 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividerowl")}
+          {...getOverrideProps(overrides, "Divideryop")}
         ></Divider>
         <Flex
           gap="16px"
@@ -167,13 +167,13 @@ export default function EditProfile(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            label="name"
+            label="Name"
             placeholder="John Doe"
             size="default"
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFieldetr")}
+            {...getOverrideProps(overrides, "TextFieldiyd")}
           ></TextField>
           <TextField
             display="flex"
@@ -185,13 +185,13 @@ export default function EditProfile(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            label="location"
+            label="Location"
             placeholder="Seattle, WA"
             size="default"
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFieldsmg")}
+            {...getOverrideProps(overrides, "TextFieldxiq")}
           ></TextField>
           <TextField
             display="flex"
@@ -203,13 +203,13 @@ export default function EditProfile(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            label="email"
+            label="Email Address"
             placeholder="john.doe@awsamplify.com"
             size="default"
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFieldeep")}
+            {...getOverrideProps(overrides, "TextFieldiyh")}
           ></TextField>
         </Flex>
         <Divider
@@ -221,7 +221,7 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividermzz")}
+          {...getOverrideProps(overrides, "Dividereqn")}
         ></Divider>
         <Flex
           padding="0px 0px 0px 0px"
