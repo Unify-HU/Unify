@@ -7,8 +7,10 @@ export default function Home() {
     return (
       
       <div>
-        <NavBar/>
+        <NavBar />
+        <center>
         <BusinessCollection />
+        </center>
       </div>
     ) 
   }
