@@ -6,13 +6,7 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useAuth,
-  useDataStoreCreateAction,
-  useStateMutationAction,
-} from "@aws-amplify/ui-react/internal";
-import { Business } from "../models";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import {
   Button,
   Flex,
@@ -22,19 +16,6 @@ import {
 } from "@aws-amplify/ui-react";
 export default function ContactUs(props) {
   const { business, overrides, ...rest } = props;
-  const authAttributes = useAuth().user?.attributes ?? {};
-  const [textFieldrsaValue, setTextFieldrsaValue] = useStateMutationAction("");
-  const [textFielduboValue, setTextFielduboValue] = useStateMutationAction("");
-  const [textFieldirnValue, setTextFieldirnValue] = useStateMutationAction("");
-  const buttonOnClick = useDataStoreCreateAction({
-    fields: {
-      businessName: textFieldrsaValue,
-      UserID: authAttributes["email"],
-      location: textFielduboValue,
-      description: textFieldirnValue,
-    },
-    model: Business,
-  });
   return (
     <Flex
       gap="24px"
@@ -175,10 +156,6 @@ export default function ContactUs(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={textFieldrsaValue}
-        onChange={(event) => {
-          setTextFieldrsaValue(event.target.value);
-        }}
         {...getOverrideProps(overrides, "TextFieldrsa")}
       ></TextField>
       <SelectField
@@ -234,10 +211,6 @@ export default function ContactUs(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={textFieldirnValue}
-        onChange={(event) => {
-          setTextFieldirnValue(event.target.value);
-        }}
         {...getOverrideProps(overrides, "TextFieldirn")}
       ></TextField>
       <TextField
@@ -256,10 +229,6 @@ export default function ContactUs(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={textFielduboValue}
-        onChange={(event) => {
-          setTextFielduboValue(event.target.value);
-        }}
         {...getOverrideProps(overrides, "TextFieldubo")}
       ></TextField>
       <Button
@@ -280,9 +249,6 @@ export default function ContactUs(props) {
         isDisabled={false}
         variation="primary"
         children="Submit Entry"
-        onClick={() => {
-          buttonOnClick();
-        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </Flex>
