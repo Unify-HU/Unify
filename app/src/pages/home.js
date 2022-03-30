@@ -1,23 +1,14 @@
 import React from "react";
 import navigation from '../assets/navigation.png';
 import placeholder from '../assets/Placeholder.png';
-import {NavBar} from   "../ui-components"
+import {NavBar, BusinessCollection} from   "../ui-components"
 
 export default function Home() {
     return (
       
-      <div style={{ fontFamily: "Pacifico" }}>
-        <center>
+      <div>
         <NavBar/>
-        </center>
-        <center2>
-         <img src={navigation} height="42px" widht="42px"/>
-         Suggestions near Washington, 20001
-         </center2>
-        <h1>
-          <img src={placeholder} alt="placeholder image for products" height="126px" width="126px"/>
-        </h1>
-
+        <BusinessCollection />
       </div>
     ) 
   }

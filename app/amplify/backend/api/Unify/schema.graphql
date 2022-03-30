@@ -1,29 +1,21 @@
-type Favorites @model @auth(rules: [{allow: public}]) @key(name: "byCustomer", fields: ["customerID"]) {
-  id: ID!
-  customerID: ID!
+enum Tags {
+  FOOD
+  ENTERTAINMENT
+  FASHION
+  BOOKS
+  ART
 }
 
-type Reccomendation @model @auth(rules: [{allow: public}]) @key(name: "byCustomer", fields: ["customerID"]) {
-  id: ID!
-  customerID: ID!
-}
-
-type BusinessOwner @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  email: AWSEmail
-  firstName: String
-  phoneNumber: AWSPhone
-  Businesses: [Business] @connection(keyName: "byBusinessOwner", fields: ["id"])
-}
-
-type Business @model @auth(rules: [{allow: public}]) @key(name: "byBusinessOwner", fields: ["businessownerID"]) {
+type Business @model @auth(rules: [{allow: public}]) @key(name: "byUser", fields: ["UserID"]) {
   id: ID!
   description: String
-  location: String
+  website: String
   promotionStatus: String
   Offerings: [Offering] @connection(keyName: "byBusiness", fields: ["id"])
-  businessownerID: ID!
   businessName: String
+  businessTags: Tags
+  UserID: ID!
+  businessPic: String
 }
 
 type Offering @model @auth(rules: [{allow: public}]) @key(name: "byBusiness", fields: ["businessID"]) {
@@ -36,7 +28,7 @@ type Offering @model @auth(rules: [{allow: public}]) @key(name: "byBusiness", fi
   Reviews: [Review] @connection(keyName: "byOffering", fields: ["id"])
 }
 
-type Review @model @auth(rules: [{allow: public}]) @key(name: "byCustomer", fields: ["customerID"]) @key(name: "byOffering", fields: ["offeringID"]) {
+type Review @model @auth(rules: [{allow: public}]) @key(name: "byUser", fields: ["customerID"]) @key(name: "byOffering", fields: ["offeringID"]) {
   id: ID!
   rating: Float
   comment: String
@@ -44,15 +36,16 @@ type Review @model @auth(rules: [{allow: public}]) @key(name: "byCustomer", fiel
   offeringID: ID!
 }
 
-type Customer @model @auth(rules: [{allow: public}]) {
+type User @model @auth(rules: [{allow: public}]) {
   id: ID!
   email: AWSEmail
   firstNam: String
   lastName: String
   phoneNumber: AWSPhone
   zipCode: Int
-  Reccomendations: [Reccomendation] @connection(keyName: "byCustomer", fields: ["id"])
-  Favorites: [Favorites] @connection(keyName: "byCustomer", fields: ["id"])
-  Reviews: [Review] @connection(keyName: "byCustomer", fields: ["id"])
+  Reviews: [Review] @connection(keyName: "byUser", fields: ["id"])
+  isBusinessOwner: Boolean
+  Businesses: [Business] @connection(keyName: "byUser", fields: ["id"])
+  profilePic: String
 }
  

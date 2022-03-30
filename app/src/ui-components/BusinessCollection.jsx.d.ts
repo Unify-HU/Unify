@@ -6,11 +6,14 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { Business } from "../models";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ContactUsProps = React.PropsWithChildren<Partial<FlexProps> & {
-    business?: Business;
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type BusinessCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: ({ item: any, index: number }: {
+        item: any;
+        index: any;
+    }) => EscapeHatchProps;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function ContactUs(props: ContactUsProps): React.ReactElement;
+export default function BusinessCollection(props: BusinessCollectionProps): React.ReactElement;

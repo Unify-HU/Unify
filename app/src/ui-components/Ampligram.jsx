@@ -10,7 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Divider, Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 export default function Ampligram(props) {
-  const { overrides, ...rest } = props;
+  const { user, overrides, ...rest } = props;
   return (
     <Flex
       gap="8px"
@@ -269,7 +269,7 @@ export default function Ampligram(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Firstname Lastname"
+            children={user?.firstNam}
             {...getOverrideProps(overrides, "Firstname Lastname")}
           ></Text>
           <Text

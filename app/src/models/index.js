@@ -2,16 +2,20 @@
 import { initSchema } from '@aws-amplify/datastore';
 import { schema } from './schema';
 
+const Tags = {
+  "FOOD": "FOOD",
+  "ENTERTAINMENT": "ENTERTAINMENT",
+  "FASHION": "FASHION",
+  "BOOKS": "BOOKS",
+  "ART": "ART"
+};
 
-
-const { Favorites, Reccomendation, BusinessOwner, Business, Offering, Review, Customer } = initSchema(schema);
+const { Business, Offering, Review, User } = initSchema(schema);
 
 export {
-  Favorites,
-  Reccomendation,
-  BusinessOwner,
   Business,
   Offering,
   Review,
-  Customer
+  User,
+  Tags
 };

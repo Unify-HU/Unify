@@ -1,180 +1,5 @@
 export const schema = {
     "models": {
-        "Favorites": {
-            "name": "Favorites",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "customerID": {
-                    "name": "customerID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                }
-            },
-            "syncable": true,
-            "pluralName": "Favorites",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byCustomer",
-                        "fields": [
-                            "customerID"
-                        ]
-                    }
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        "Reccomendation": {
-            "name": "Reccomendation",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "customerID": {
-                    "name": "customerID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                }
-            },
-            "syncable": true,
-            "pluralName": "Reccomendations",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byCustomer",
-                        "fields": [
-                            "customerID"
-                        ]
-                    }
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        "BusinessOwner": {
-            "name": "BusinessOwner",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "email": {
-                    "name": "email",
-                    "isArray": false,
-                    "type": "AWSEmail",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "firstName": {
-                    "name": "firstName",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "phoneNumber": {
-                    "name": "phoneNumber",
-                    "isArray": false,
-                    "type": "AWSPhone",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "Businesses": {
-                    "name": "Businesses",
-                    "isArray": true,
-                    "type": {
-                        "model": "Business"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "businessownerID"
-                    }
-                }
-            },
-            "syncable": true,
-            "pluralName": "BusinessOwners",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
         "Business": {
             "name": "Business",
             "fields": {
@@ -192,8 +17,8 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "location": {
-                    "name": "location",
+                "website": {
+                    "name": "website",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -220,15 +45,31 @@ export const schema = {
                         "associatedWith": "businessID"
                     }
                 },
-                "businessownerID": {
-                    "name": "businessownerID",
+                "businessName": {
+                    "name": "businessName",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "businessTags": {
+                    "name": "businessTags",
+                    "isArray": false,
+                    "type": {
+                        "enum": "Tags"
+                    },
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "UserID": {
+                    "name": "UserID",
                     "isArray": false,
                     "type": "ID",
                     "isRequired": true,
                     "attributes": []
                 },
-                "businessName": {
-                    "name": "businessName",
+                "businessPic": {
+                    "name": "businessPic",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -245,9 +86,9 @@ export const schema = {
                 {
                     "type": "key",
                     "properties": {
-                        "name": "byBusinessOwner",
+                        "name": "byUser",
                         "fields": [
-                            "businessownerID"
+                            "UserID"
                         ]
                     }
                 },
@@ -412,7 +253,7 @@ export const schema = {
                 {
                     "type": "key",
                     "properties": {
-                        "name": "byCustomer",
+                        "name": "byUser",
                         "fields": [
                             "customerID"
                         ]
@@ -445,8 +286,8 @@ export const schema = {
                 }
             ]
         },
-        "Customer": {
-            "name": "Customer",
+        "User": {
+            "name": "User",
             "fields": {
                 "id": {
                     "name": "id",
@@ -490,34 +331,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "Reccomendations": {
-                    "name": "Reccomendations",
-                    "isArray": true,
-                    "type": {
-                        "model": "Reccomendation"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "customerID"
-                    }
-                },
-                "Favorites": {
-                    "name": "Favorites",
-                    "isArray": true,
-                    "type": {
-                        "model": "Favorites"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "customerID"
-                    }
-                },
                 "Reviews": {
                     "name": "Reviews",
                     "isArray": true,
@@ -531,10 +344,38 @@ export const schema = {
                         "connectionType": "HAS_MANY",
                         "associatedWith": "customerID"
                     }
+                },
+                "isBusinessOwner": {
+                    "name": "isBusinessOwner",
+                    "isArray": false,
+                    "type": "Boolean",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "Businesses": {
+                    "name": "Businesses",
+                    "isArray": true,
+                    "type": {
+                        "model": "Business"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true,
+                    "association": {
+                        "connectionType": "HAS_MANY",
+                        "associatedWith": "UserID"
+                    }
+                },
+                "profilePic": {
+                    "name": "profilePic",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
                 }
             },
             "syncable": true,
-            "pluralName": "Customers",
+            "pluralName": "Users",
             "attributes": [
                 {
                     "type": "model",
@@ -559,7 +400,18 @@ export const schema = {
             ]
         }
     },
-    "enums": {},
+    "enums": {
+        "Tags": {
+            "name": "Tags",
+            "values": [
+                "FOOD",
+                "ENTERTAINMENT",
+                "FASHION",
+                "BOOKS",
+                "ART"
+            ]
+        }
+    },
     "nonModels": {},
-    "version": "a2742097e3c20730b4d871ce1a335f48"
+    "version": "0bfba1b43296d292bc57b201f4b6c2f7"
 };

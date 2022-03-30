@@ -13,11 +13,9 @@ import {
   Flex,
   Icon,
   Image,
-  Rating,
   Text,
   View,
 } from "@aws-amplify/ui-react";
-import MyIcon from "./MyIcon";
 export default function CardF(props) {
   const { business, overrides, ...rest } = props;
   return (
@@ -33,11 +31,12 @@ export default function CardF(props) {
     >
       <Image
         width="320px"
-        height="402px"
+        height="294px"
         shrink="0"
         alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
+        src={business?.businessPic}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
@@ -46,7 +45,7 @@ export default function CardF(props) {
         width="640px"
         grow="1"
         basis="640px"
-        height="402px"
+        height="294px"
         position="relative"
         padding="32px 32px 32px 32px"
         backgroundColor="rgba(255,255,255,1)"
@@ -79,49 +78,6 @@ export default function CardF(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Ratings")}
-        >
-          <Rating
-            display="flex"
-            gap="8px"
-            direction="row"
-            width="fit-content"
-            alignItems="center"
-            shrink="0"
-            height="36px"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            size="large"
-            {...getOverrideProps(overrides, "Rating")}
-          ></Rating>
-          <Text
-            fontFamily="Inter"
-            fontSize="16px"
-            fontWeight="400"
-            color="rgba(13,26,38,1)"
-            lineHeight="22px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            textDecoration="underline"
-            width="19px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="72"
-            {...getOverrideProps(overrides, "72")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="16px"
-          direction="row"
-          width="fit-content"
-          alignItems="center"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Tags")}
         >
           <Badge
@@ -145,8 +101,8 @@ export default function CardF(props) {
             textAlign="left"
             size="small"
             variation="default"
-            children="New"
-            {...getOverrideProps(overrides, "Badgefpj")}
+            children={business?.businessTags}
+            {...getOverrideProps(overrides, "Badgefah")}
           ></Badge>
           <Badge
             display="flex"
@@ -169,8 +125,8 @@ export default function CardF(props) {
             textAlign="left"
             size="small"
             variation="default"
-            children="Classic"
-            {...getOverrideProps(overrides, "Badgedjw")}
+            children={business?.businessTags}
+            {...getOverrideProps(overrides, "Badgezxn")}
           ></Badge>
           <Badge
             display="flex"
@@ -193,8 +149,8 @@ export default function CardF(props) {
             textAlign="left"
             size="small"
             variation="default"
-            children="Modern"
-            {...getOverrideProps(overrides, "Badgehwv")}
+            children={business?.businessTags}
+            {...getOverrideProps(overrides, "Badgezig")}
           ></Badge>
         </Flex>
         <Text
@@ -217,48 +173,6 @@ export default function CardF(props) {
           children={business?.description}
           {...getOverrideProps(overrides, "Information about this product.")}
         ></Text>
-        <Flex
-          gap="16px"
-          direction="row"
-          alignItems="flex-start"
-          shrink="0"
-          alignSelf="stretch"
-          objectFit="cover"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Quote")}
-        >
-          <MyIcon
-            width="24px"
-            height="24px"
-            shrink="0"
-            overflow="hidden"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            type="chat"
-            {...getOverrideProps(overrides, "MyIcon")}
-          ></MyIcon>
-          <Text
-            fontFamily="Inter"
-            fontSize="16px"
-            fontWeight="400"
-            color="rgba(48,64,80,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            letterSpacing="0.01px"
-            width="536px"
-            grow="1"
-            basis="536px"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="“This is a quote.“"
-            {...getOverrideProps(overrides, "\u201CThis is a quote.\u201C")}
-          ></Text>
-        </Flex>
         <Divider
           height="1px"
           shrink="0"
@@ -302,12 +216,12 @@ export default function CardF(props) {
             >
               <Icon
                 width="17.58984375px"
-                height="13.40997314453125px"
+                height="13.410003662109375px"
                 viewBox={{
                   minX: 0,
                   minY: 0,
                   width: 17.58984375,
-                  height: 13.40997314453125,
+                  height: 13.410003662109375,
                 }}
                 paths={[
                   {

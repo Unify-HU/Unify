@@ -18,6 +18,7 @@ export { default as ProfileA } from "./ProfileA";
 export { default as FeaturesText2x2 } from "./FeaturesText2x2";
 export { default as CardF } from "./CardF";
 export { default as HeroLayout2 } from "./HeroLayout2";
+export { default as BusinessCollection } from "./BusinessCollection";
 export { default as MarketingPricing } from "./MarketingPricing";
 export { default as SocialA } from "./SocialA";
 export { default as MarketingFooter } from "./MarketingFooter";

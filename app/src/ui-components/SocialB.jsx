@@ -7,7 +7,7 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Divider, Flex, Image, Text } from "@aws-amplify/ui-react";
+import { Divider, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 export default function SocialB(props) {
   const { overrides, ...rest } = props;
@@ -15,6 +15,7 @@ export default function SocialB(props) {
     <Flex
       gap="16px"
       direction="column"
+      width="473px"
       position="relative"
       padding="16px 16px 16px 16px"
       backgroundColor="rgba(255,255,255,1)"
@@ -43,45 +44,19 @@ export default function SocialB(props) {
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Liked")}
       >
-        <Flex
-          gap="9px"
+        <Rating
+          display="flex"
+          gap="8px"
           direction="row"
           width="fit-content"
-          alignItems="flex-start"
+          alignItems="center"
           shrink="0"
-          height="24px"
+          height="36px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "User Liked")}
-        >
-          <MyIcon
-            width="24px"
-            height="24px"
-            shrink="0"
-            overflow="hidden"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            type="favorite"
-            {...getOverrideProps(overrides, "MyIconrts")}
-          ></MyIcon>
-          <Text
-            fontFamily="Inter"
-            fontSize="14px"
-            fontWeight="400"
-            color="rgba(92,102,112,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Danny liked this"
-            {...getOverrideProps(overrides, "Danny liked this")}
-          ></Text>
-        </Flex>
+          size="large"
+          {...getOverrideProps(overrides, "Rating")}
+        ></Rating>
       </Flex>
       <Flex
         gap="16px"
@@ -106,9 +81,9 @@ export default function SocialB(props) {
         <Flex
           gap="8px"
           direction="column"
-          width="351px"
+          width="345px"
           grow="1"
-          basis="351px"
+          basis="345px"
           height="80px"
           position="relative"
           padding="0px 0px 0px 0px"
@@ -123,7 +98,7 @@ export default function SocialB(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Framedsq")}
+            {...getOverrideProps(overrides, "Framemdo")}
           >
             <Flex
               gap="16px"
@@ -134,7 +109,7 @@ export default function SocialB(props) {
               height="24px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Framezgq")}
+              {...getOverrideProps(overrides, "Frameyic")}
             >
               <Text
                 fontFamily="Inter"
@@ -172,37 +147,19 @@ export default function SocialB(props) {
                 children="Timestamp"
                 {...getOverrideProps(overrides, "Timestamp")}
               ></Text>
-              <Text
-                fontFamily="Inter"
-                fontSize="16px"
-                fontWeight="400"
-                color="rgba(92,102,112,1)"
-                lineHeight="24px"
-                textAlign="left"
-                display="flex"
-                direction="column"
-                justifyContent="flex-start"
-                letterSpacing="0.01px"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                whiteSpace="pre-wrap"
-                children="Lorem ipsum"
-                {...getOverrideProps(overrides, "Lorem ipsum")}
-              ></Text>
             </Flex>
             <Flex
               gap="0"
               direction="row"
-              width="66px"
+              width="175px"
               justifyContent="flex-end"
               alignItems="flex-start"
               grow="1"
-              basis="66px"
+              basis="175px"
               height="24px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Framejci")}
+              {...getOverrideProps(overrides, "Frameixj")}
             >
               <MyIcon
                 width="24px"
@@ -212,7 +169,7 @@ export default function SocialB(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 type="more_horiz"
-                {...getOverrideProps(overrides, "MyIconmwo")}
+                {...getOverrideProps(overrides, "MyIcon")}
               ></MyIcon>
             </Flex>
           </Flex>
@@ -240,148 +197,6 @@ export default function SocialB(props) {
             )}
           ></Text>
         </Flex>
-      </Flex>
-      <Flex
-        gap="80px"
-        direction="row"
-        alignItems="flex-start"
-        shrink="0"
-        alignSelf="stretch"
-        objectFit="cover"
-        position="relative"
-        padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Share")}
-      >
-        <Flex
-          gap="16px"
-          direction="row"
-          width="fit-content"
-          alignItems="flex-start"
-          shrink="0"
-          height="24px"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Shareemp")}
-        >
-          <MyIcon
-            width="24px"
-            height="24px"
-            shrink="0"
-            overflow="hidden"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            type="reply"
-            {...getOverrideProps(overrides, "MyIconjdz")}
-          ></MyIcon>
-          <Text
-            fontFamily="Inter"
-            fontSize="16px"
-            fontWeight="400"
-            color="rgba(13,26,38,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            letterSpacing="0.01px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="99"
-            {...getOverrideProps(overrides, "99hcd")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="16px"
-          direction="row"
-          width="fit-content"
-          alignItems="flex-start"
-          shrink="0"
-          height="24px"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Repost")}
-        >
-          <MyIcon
-            width="24px"
-            height="24px"
-            shrink="0"
-            overflow="hidden"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            type="shuffle"
-            {...getOverrideProps(overrides, "MyIconlaj")}
-          ></MyIcon>
-          <Text
-            fontFamily="Inter"
-            fontSize="16px"
-            fontWeight="400"
-            color="rgba(13,26,38,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            letterSpacing="0.01px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="99"
-            {...getOverrideProps(overrides, "99dgt")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="16px"
-          direction="row"
-          width="fit-content"
-          alignItems="flex-start"
-          shrink="0"
-          height="24px"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Like")}
-        >
-          <MyIcon
-            width="24px"
-            height="24px"
-            shrink="0"
-            overflow="hidden"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            type="favorite_border"
-            {...getOverrideProps(overrides, "MyIconuvv")}
-          ></MyIcon>
-          <Text
-            fontFamily="Inter"
-            fontSize="16px"
-            fontWeight="400"
-            color="rgba(13,26,38,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            letterSpacing="0.01px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="99"
-            {...getOverrideProps(overrides, "99dbo")}
-          ></Text>
-        </Flex>
-        <MyIcon
-          width="24px"
-          height="24px"
-          shrink="0"
-          overflow="hidden"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          type="share"
-          {...getOverrideProps(overrides, "MyIconqpd")}
-        ></MyIcon>
       </Flex>
     </Flex>
   );
