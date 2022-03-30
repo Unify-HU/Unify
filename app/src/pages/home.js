@@ -5,7 +5,7 @@ export default function Home() {
     return (
       
       <div className="home">
-        <UnifyBanner />
+        <UnifyBanner width="1220px" />
         <BusinessCardCollection />
       </div>
     ) 

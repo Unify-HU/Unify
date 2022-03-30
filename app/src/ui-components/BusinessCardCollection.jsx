@@ -25,10 +25,10 @@ export default function BusinessCardCollection(props) {
   return (
     <Collection
       type="list"
-      isSearchable={true}
+      isSearchable="true"
       searchPlaceholder="Search..."
       direction="column"
-      justifyContent="stretch"
+      justifyContent="right"
       items={items || []}
       {...rest}
       {...getOverrideProps(overrides, "BusinessCardCollection")}
