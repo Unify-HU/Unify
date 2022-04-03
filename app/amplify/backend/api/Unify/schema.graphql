@@ -1,9 +1,13 @@
 enum Tags {
   FOOD
   ENTERTAINMENT
-  FASHION
+  CLOTHING
   BOOKS
   ART
+  BEAUTY
+  FINANCIAL
+  INFRASTRUCTURE
+  HEALTH
 }
 
 type Business @model @auth(rules: [{allow: public}]) @key(name: "byUser", fields: ["UserID"]) {

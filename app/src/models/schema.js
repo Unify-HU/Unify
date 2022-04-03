@@ -406,9 +406,13 @@ export const schema = {
             "values": [
                 "FOOD",
                 "ENTERTAINMENT",
-                "FASHION",
+                "CLOTHING",
                 "BOOKS",
-                "ART"
+                "ART",
+                "BEAUTY",
+                "FINANCIAL",
+                "INFRASTRUCTURE",
+                "HEALTH"
             ]
         }
     },

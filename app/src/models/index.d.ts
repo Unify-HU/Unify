@@ -3,9 +3,13 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 export enum Tags {
   FOOD = "FOOD",
   ENTERTAINMENT = "ENTERTAINMENT",
-  FASHION = "FASHION",
+  CLOTHING = "CLOTHING",
   BOOKS = "BOOKS",
-  ART = "ART"
+  ART = "ART",
+  BEAUTY = "BEAUTY",
+  FINANCIAL = "FINANCIAL",
+  INFRASTRUCTURE = "INFRASTRUCTURE",
+  HEALTH = "HEALTH"
 }
 
 

@@ -122,7 +122,7 @@ export default function BusinessCard(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Information about this product."
+          children={business?.description}
           {...getOverrideProps(overrides, "Information about this product.")}
         ></Text>
         <Divider

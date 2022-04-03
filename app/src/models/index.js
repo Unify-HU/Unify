@@ -5,9 +5,13 @@ import { schema } from './schema';
 const Tags = {
   "FOOD": "FOOD",
   "ENTERTAINMENT": "ENTERTAINMENT",
-  "FASHION": "FASHION",
+  "CLOTHING": "CLOTHING",
   "BOOKS": "BOOKS",
-  "ART": "ART"
+  "ART": "ART",
+  "BEAUTY": "BEAUTY",
+  "FINANCIAL": "FINANCIAL",
+  "INFRASTRUCTURE": "INFRASTRUCTURE",
+  "HEALTH": "HEALTH"
 };
 
 const { Business, Offering, Review, User } = initSchema(schema);
