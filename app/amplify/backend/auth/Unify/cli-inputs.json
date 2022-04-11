@@ -3,7 +3,7 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "unify099fefc2",
+    "resourceNameTruncated": "unify204c1304",
     "userPoolName": "Unify",
     "autoVerifiedAttributes": [
       "email"
@@ -14,11 +14,16 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Your verification code",
-    "emailVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Verification code: {####}",
+    "emailVerificationMessage": "Verification code: {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
-    "passwordPolicyCharacters": [],
+    "passwordPolicyCharacters": [
+      "Requires Lowercase",
+      "Requires Numbers",
+      "Requires Symbols",
+      "Requires Uppercase"
+    ],
     "requiredAttributes": [
       "email"
     ],
@@ -27,36 +32,21 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "Unify099fefc2_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "Unify204c1304_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "099fefc2",
+    "sharedId": "204c1304",
     "resourceName": "Unify",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
     "usernameAttributes": [
       "email"
     ],
-    "useDefault": "default",
+    "useDefault": "manual",
     "userPoolGroups": false,
     "userPoolGroupList": [],
     "adminQueries": false,
-    "hostedUI": false,
-    "usernameCaseSensitive": false,
-    "useEnabledMfas": false,
-    "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
-    },
-    "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
-    },
-    "breakCircularDependency": false,
-    "dependsOn": [],
-    "authProviders": []
+    "thirdPartyAuth": false,
+    "authProviders": [],
+    "useEnabledMfas": false
   }
 }
