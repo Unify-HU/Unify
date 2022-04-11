@@ -18,7 +18,7 @@ export declare class Business {
   readonly id: string;
   readonly description?: string;
   readonly website?: string;
-  readonly promotionStatus?: string;
+  readonly location?: string;
   readonly Offerings?: (Offering | null)[];
   readonly businessName?: string;
   readonly businessTags?: Tags | keyof typeof Tags;

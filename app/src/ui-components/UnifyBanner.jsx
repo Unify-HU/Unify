@@ -6,10 +6,14 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function UnifyBanner(props) {
   const { overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <Flex
       gap="20px"
@@ -102,6 +106,9 @@ export default function UnifyBanner(props) {
         isDisabled={false}
         variation="primary"
         children="Add a Business"
+        onClick={() => {
+          buttonOnClick();
+        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
       <Image

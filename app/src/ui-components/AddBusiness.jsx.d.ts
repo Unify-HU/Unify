@@ -6,8 +6,11 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { Business } from "../models";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type AddBusinessProps = React.PropsWithChildren<Partial<FlexProps> & {
+    business?: Business;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function AddBusiness(props: AddBusinessProps): React.ReactElement;

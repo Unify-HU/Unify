@@ -5,8 +5,8 @@
  **************************************************************************/
 
 import React from "react";
-import { Business } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { Business } from "../models";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type BusinessCardProps = React.PropsWithChildren<Partial<FlexProps> & {
     business?: Business;

@@ -26,9 +26,12 @@ export default function BusinessCardCollection(props) {
     <Collection
       type="list"
       isSearchable="true"
+      isPaginated={true}
       searchPlaceholder="Search..."
+      itemsPerPage={6}
       direction="column"
-      justifyContent="right"
+      alignItems="stretch"
+      justifyContent="left"
       items={items || []}
       {...rest}
       {...getOverrideProps(overrides, "BusinessCardCollection")}

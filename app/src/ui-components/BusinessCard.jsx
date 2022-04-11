@@ -6,7 +6,10 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import {
   Badge,
   Divider,
@@ -18,6 +21,10 @@ import {
 } from "@aws-amplify/ui-react";
 export default function BusinessCard(props) {
   const { business, overrides, ...rest } = props;
+  const businessNameOnClick = useNavigateAction({
+    type: "url",
+    url: business?.website,
+  });
   return (
     <Flex
       gap="0"
@@ -68,6 +75,9 @@ export default function BusinessCard(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children={business?.businessName}
+          onClick={() => {
+            businessNameOnClick();
+          }}
           {...getOverrideProps(overrides, "Business Name")}
         ></Text>
         <Flex

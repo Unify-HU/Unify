@@ -14,7 +14,7 @@ type Business @model @auth(rules: [{allow: public}]) @key(name: "byUser", fields
   id: ID!
   description: String
   website: String
-  promotionStatus: String
+  location: String
   Offerings: [Offering] @connection(keyName: "byBusiness", fields: ["id"])
   businessName: String
   businessTags: Tags

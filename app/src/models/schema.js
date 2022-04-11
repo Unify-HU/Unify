@@ -24,8 +24,8 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "promotionStatus": {
-                    "name": "promotionStatus",
+                "location": {
+                    "name": "location",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -417,5 +417,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "0bfba1b43296d292bc57b201f4b6c2f7"
+    "version": "153a3e567c57c1b28749344287743128"
 };

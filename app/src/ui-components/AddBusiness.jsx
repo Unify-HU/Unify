@@ -6,7 +6,13 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useAuth,
+  useDataStoreCreateAction,
+  useStateMutationAction,
+} from "@aws-amplify/ui-react/internal";
+import { Business } from "../models";
 import {
   Button,
   Flex,
@@ -15,11 +21,28 @@ import {
   TextField,
 } from "@aws-amplify/ui-react";
 export default function AddBusiness(props) {
-  const { overrides, ...rest } = props;
+  const { business, overrides, ...rest } = props;
+  const authAttributes = useAuth().user?.attributes ?? {};
+  const [descriptionValue, setDescriptionValue] = useStateMutationAction("");
+  const [locationValue, setLocationValue] = useStateMutationAction("");
+  const [websiteValue, setWebsiteValue] = useStateMutationAction("");
+  const [businessNameValue, setBusinessNameValue] = useStateMutationAction("");
+  const submitOnClick = useDataStoreCreateAction({
+    fields: {
+      description: descriptionValue,
+      location: locationValue,
+      website: websiteValue,
+      businessName: businessNameValue,
+      businessTags: "",
+      UserID: authAttributes["email"],
+    },
+    model: Business,
+  });
   return (
     <Flex
       gap="24px"
       direction="column"
+      height="1119px"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
@@ -156,7 +179,11 @@ export default function AddBusiness(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        {...getOverrideProps(overrides, "TextFieldqsh")}
+        value={businessNameValue}
+        onChange={(event) => {
+          setBusinessNameValue(event.target.value);
+        }}
+        {...getOverrideProps(overrides, "BusinessName")}
       ></TextField>
       <SelectField
         display="flex"
@@ -174,8 +201,30 @@ export default function AddBusiness(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        {...getOverrideProps(overrides, "SelectField")}
+        {...getOverrideProps(overrides, "BusinessType")}
       ></SelectField>
+      <TextField
+        display="flex"
+        gap="12px"
+        direction="column"
+        justifyContent="center"
+        shrink="0"
+        alignSelf="stretch"
+        objectFit="cover"
+        position="relative"
+        padding="0px 0px 0px 0px"
+        label="Business Location"
+        placeholder="Where is it?"
+        size="large"
+        isDisabled={false}
+        labelHidden={false}
+        variation="default"
+        value={locationValue}
+        onChange={(event) => {
+          setLocationValue(event.target.value);
+        }}
+        {...getOverrideProps(overrides, "Location")}
+      ></TextField>
       <TextField
         display="flex"
         gap="12px"
@@ -192,7 +241,11 @@ export default function AddBusiness(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        {...getOverrideProps(overrides, "TextFieldhwh")}
+        value={descriptionValue}
+        onChange={(event) => {
+          setDescriptionValue(event.target.value);
+        }}
+        {...getOverrideProps(overrides, "Description")}
       ></TextField>
       <TextField
         display="flex"
@@ -210,7 +263,29 @@ export default function AddBusiness(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        {...getOverrideProps(overrides, "TextFieldwxf")}
+        value={websiteValue}
+        onChange={(event) => {
+          setWebsiteValue(event.target.value);
+        }}
+        {...getOverrideProps(overrides, "Website")}
+      ></TextField>
+      <TextField
+        display="flex"
+        gap="12px"
+        direction="column"
+        justifyContent="center"
+        shrink="0"
+        alignSelf="stretch"
+        objectFit="cover"
+        position="relative"
+        padding="0px 0px 0px 0px"
+        label="Business Image"
+        placeholder="Provide a .jpg/.png link to a picture representing your business."
+        size="large"
+        isDisabled={false}
+        labelHidden={false}
+        variation="default"
+        {...getOverrideProps(overrides, "Image")}
       ></TextField>
       <Button
         display="flex"
@@ -230,7 +305,10 @@ export default function AddBusiness(props) {
         isDisabled={false}
         variation="primary"
         children="Submit Entry"
-        {...getOverrideProps(overrides, "Button")}
+        onClick={() => {
+          submitOnClick();
+        }}
+        {...getOverrideProps(overrides, "Submit")}
       ></Button>
     </Flex>
   );
