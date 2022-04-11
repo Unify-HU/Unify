@@ -27,6 +27,7 @@ export default function AddBusiness(props) {
   const [locationValue, setLocationValue] = useStateMutationAction("");
   const [websiteValue, setWebsiteValue] = useStateMutationAction("");
   const [businessNameValue, setBusinessNameValue] = useStateMutationAction("");
+  const [imageValue, setImageValue] = useStateMutationAction("");
   const submitOnClick = useDataStoreCreateAction({
     fields: {
       description: descriptionValue,
@@ -35,6 +36,7 @@ export default function AddBusiness(props) {
       businessName: businessNameValue,
       businessTags: "",
       UserID: authAttributes["email"],
+      businessPic: imageValue,
     },
     model: Business,
   });
@@ -285,6 +287,10 @@ export default function AddBusiness(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
+        value={imageValue}
+        onChange={(event) => {
+          setImageValue(event.target.value);
+        }}
         {...getOverrideProps(overrides, "Image")}
       ></TextField>
       <Button
