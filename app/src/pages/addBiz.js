@@ -1,10 +1,23 @@
 import React from "react";
-import {AddBusiness} from   "../ui-components"
+import {BrowserRouter as Router, useNavigate } from 'react-router-dom';
+import {AddBusiness, UnifyBanner} from   "../ui-components"
 
-export default function Home() {
+export default function AddBiz() {
+  let Navigate = useNavigate()
+  function handleClick(){
+    Navigate('/')
+  }
+  const ButtonOverRide = 
+  {
+    "Button": {
+      label: {text: "Return"},
+      onClick: () => {handleClick()}
+    }
+  }
     return (
       
-      <div className="home">
+      <div className="AddBiz">
+        <UnifyBanner width="1220px" overrides={ButtonOverRide}/>
         <AddBusiness />
       </div>
     ) 
