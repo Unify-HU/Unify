@@ -13,6 +13,7 @@ import {
   useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
 import { Business } from "../models";
+import { useEffect } from "react";
 import {
   Button,
   Flex,
@@ -40,6 +41,46 @@ export default function AddBusiness(props) {
     },
     model: Business,
   });
+  useEffect(() => {
+    if (
+      descriptionValue === "" &&
+      business !== undefined &&
+      business?.description !== undefined
+    )
+      setDescriptionValue(business?.description);
+  }, [business]);
+  useEffect(() => {
+    if (
+      locationValue === "" &&
+      business !== undefined &&
+      business?.location !== undefined
+    )
+      setLocationValue(business?.location);
+  }, [business]);
+  useEffect(() => {
+    if (
+      websiteValue === "" &&
+      business !== undefined &&
+      business?.website !== undefined
+    )
+      setWebsiteValue(business?.website);
+  }, [business]);
+  useEffect(() => {
+    if (
+      businessNameValue === "" &&
+      business !== undefined &&
+      business?.businessName !== undefined
+    )
+      setBusinessNameValue(business?.businessName);
+  }, [business]);
+  useEffect(() => {
+    if (
+      imageValue === "" &&
+      business !== undefined &&
+      business?.businessPic !== undefined
+    )
+      setImageValue(business?.businessPic);
+  }, [business]);
   return (
     <Flex
       gap="24px"
@@ -198,7 +239,7 @@ export default function AddBusiness(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         label="Business Type "
-        placeholder="What kind of business is this? "
+        placeholder={business?.businessTags}
         size="large"
         isDisabled={false}
         labelHidden={false}

@@ -22,44 +22,41 @@ import {
 export default function BusinessCard(props) {
   const { business, overrides, ...rest } = props;
   const businessNameOnClick = useNavigateAction({
+    target: "_blank",
     type: "url",
     url: business?.website,
   });
   return (
     <Flex
       gap="0"
-      direction="row"
-      width="960px"
-      alignItems="flex-start"
+      direction="column"
+      width="306px"
+      height="523px"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
       {...getOverrideProps(overrides, "BusinessCard")}
     >
       <Image
-        width="320px"
-        height="294px"
+        width="306px"
+        height="239px"
         shrink="0"
-        alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
         src={business?.businessPic}
         {...getOverrideProps(overrides, "image")}
       ></Image>
-      <Flex
-        gap="24px"
-        direction="column"
-        width="640px"
-        grow="1"
-        basis="640px"
-        height="294px"
+      <View
+        width="306px"
+        height="284px"
+        shrink="0"
         position="relative"
-        padding="32px 32px 32px 32px"
+        padding="0px 0px 0px 0px"
         backgroundColor="rgba(255,255,255,1)"
         {...getOverrideProps(overrides, "Card Area")}
       >
         <Text
-          fontFamily="Raleway"
+          fontFamily="Inter"
           fontSize="24px"
           fontWeight="700"
           color="rgba(44,92,102,1)"
@@ -68,10 +65,10 @@ export default function BusinessCard(props) {
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          shrink="0"
-          alignSelf="stretch"
-          objectFit="cover"
-          position="relative"
+          width="342px"
+          position="absolute"
+          top="32px"
+          left="32px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children={business?.businessName}
@@ -82,11 +79,11 @@ export default function BusinessCard(props) {
         ></Text>
         <Flex
           gap="16px"
+          position="absolute"
+          top="81px"
+          left="32px"
           direction="row"
-          width="fit-content"
           alignItems="center"
-          shrink="0"
-          position="relative"
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Tags")}
         >
@@ -126,21 +123,22 @@ export default function BusinessCard(props) {
           direction="column"
           justifyContent="flex-start"
           letterSpacing="0.01px"
-          shrink="0"
-          alignSelf="stretch"
-          objectFit="cover"
-          position="relative"
+          width="239px"
+          height="105px"
+          position="absolute"
+          top="114px"
+          left="32px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children={business?.description}
           {...getOverrideProps(overrides, "Information about this product.")}
         ></Text>
         <Divider
+          width="239px"
           height="1px"
-          shrink="0"
-          alignSelf="stretch"
-          objectFit="cover"
-          position="relative"
+          position="absolute"
+          top="236px"
+          left="32px"
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
@@ -148,11 +146,11 @@ export default function BusinessCard(props) {
         ></Divider>
         <Flex
           gap="32px"
+          position="absolute"
+          top="248px"
+          left="43px"
           direction="row"
-          width="fit-content"
           alignItems="flex-start"
-          shrink="0"
-          position="relative"
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Features")}
         >
@@ -177,18 +175,18 @@ export default function BusinessCard(props) {
               {...getOverrideProps(overrides, "Icon")}
             >
               <Icon
-                width="17.590087890625px"
-                height="13.410003662109375px"
+                width="17.5899658203125px"
+                height="13.40997314453125px"
                 viewBox={{
                   minX: 0,
                   minY: 0,
-                  width: 17.590087890625,
-                  height: 13.410003662109375,
+                  width: 17.5899658203125,
+                  height: 13.40997314453125,
                 }}
                 paths={[
                   {
                     d: "M5.59 10.58L1.42 6.41L0 7.82L5.59 13.41L17.59 1.41L16.18 0L5.59 10.58Z",
-                    fill: "rgba(67,168,84,1)",
+                    fill: "rgba(64,170,191,1)",
                     fillRule: "nonzero",
                   },
                 ]}
@@ -203,7 +201,7 @@ export default function BusinessCard(props) {
           </Flex>
         </Flex>
         <Text
-          fontFamily="Lato"
+          fontFamily="Inter"
           fontSize="12px"
           fontWeight="700"
           color="rgba(159,155,155,1)"
@@ -212,14 +210,15 @@ export default function BusinessCard(props) {
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          shrink="0"
-          position="relative"
+          position="absolute"
+          top="254px"
+          left="92px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="verified by business owner! "
           {...getOverrideProps(overrides, "verified by business owner!")}
         ></Text>
-      </Flex>
+      </View>
     </Flex>
   );
 }

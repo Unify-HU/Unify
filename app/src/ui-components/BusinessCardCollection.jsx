@@ -24,14 +24,15 @@ export default function BusinessCardCollection(props) {
         }).items;
   return (
     <Collection
-      type="list"
+      type="grid"
       isSearchable="true"
       isPaginated={true}
       searchPlaceholder="Search..."
-      itemsPerPage={6}
-      direction="column"
+      itemsPerPage={9}
+      templateColumns="1fr 1fr 1fr"
+      autoFlow="row"
       alignItems="stretch"
-      justifyContent="left"
+      justifyContent="stretch"
       items={items || []}
       {...rest}
       {...getOverrideProps(overrides, "BusinessCardCollection")}
@@ -39,6 +40,9 @@ export default function BusinessCardCollection(props) {
       {(item, index) => (
         <BusinessCard
           business={item}
+          height="auto"
+          width="auto"
+          margin="30px 0 0 20px"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         ></BusinessCard>

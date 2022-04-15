@@ -4,8 +4,10 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
+export { default as Spotlight } from "./Spotlight";
 export { default as UnifyBanner } from "./UnifyBanner";
 export { default as CustomerReview } from "./CustomerReview";
+export { default as SearchText } from "./SearchText";
 export { default as ProfileWidgetView } from "./ProfileWidgetView";
 export { default as EditProfile } from "./EditProfile";
 export { default as ProductCard } from "./ProductCard";

@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Route, useNavigate } from 'react-router-dom';
 import React from "react";
-import {UnifyBanner, BusinessCardCollection} from   "../ui-components"
-
+import {UnifyBanner, BusinessCardCollection, Spotlight, SearchText} from   "../ui-components"
+import '../index.css';
 
 
 
@@ -9,6 +9,7 @@ export default function Home() {
   let Navigate = useNavigate()
   function handleClick(){
     Navigate('/addBiz')
+    console.log("navigating")
   }
   const ButtonOverRide = 
   {
@@ -18,8 +19,12 @@ export default function Home() {
   }
     return (
       <div className="home">
-        <UnifyBanner width="1220px" overrides={ButtonOverRide}/>
-        <BusinessCardCollection />
+        <UnifyBanner width="100%" overrides={ButtonOverRide}/>
+        <Spotlight padding-bottom="200px"/>
+        <SearchText/>
+        <div className="biz-card-wrapper">
+          <BusinessCardCollection/>
+        </div>
       </div>
     ) 
   }
